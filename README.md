@@ -7,6 +7,9 @@ For use primarily in the data update process of our search index.
 
 Build the uberjar: `lein uberjar`, and then run it with `java -jar`. It'll be in the `target` directory.
 
+The program fetches the database dump from HSL, and expects the HSL API username and password to be in
+environment variables `HSL_API_USERNAME` and `HSL_API_PASSWORD`.
+
 The program takes as arguments names of cities and the corresponding filenames into which the station
 data should be added. For example:
 
