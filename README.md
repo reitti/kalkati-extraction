@@ -1,15 +1,17 @@
 # kalkati-extraction
 
-I'm an app. Or maybe I'm a library? I haven't decided yet. 
-
-The choice is up to you!
+A command-line app for extracting names and coordinates of stops in Kalkati.net XML database dumps.
+For use primarily in the data update process of our search index.
 
 ## Usage
 
-FIXME
+Build the uberjar: `lein uberjar`, and then run it with `java -jar`. It'll be in the `target` directory.
 
-## License
+The program takes as arguments names of cities and the corresponding filenames into which the station
+data should be added. For example:
 
-Copyright © 2012 FIXME
+    java -jar kalkati-extraction-0.0.1.jar Helsinki=/path/to/helsinki.txt Vantaa=/path/to/vantaa.txt
 
-Distributed under the Eclipse Public License, the same as Clojure.
+Each line written to the given files will be a stop name and its coordinates (lon,lat) separated by a pipe.
+
+    Vuosaaren uimahalli|25.1416744,60.2088469
