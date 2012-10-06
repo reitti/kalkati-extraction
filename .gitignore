@@ -3,6 +3,7 @@
 /classes
 /bin
 /checkouts
+/.settings
 pom.xml
 *.jar
 *.class
